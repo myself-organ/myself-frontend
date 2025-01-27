@@ -1,5 +1,5 @@
 // @ts-ignore
-import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router';
+import { createRouter, createWebHistory, type RouteRecordRaw } from 'vue-router';
 import Home from '../pages/HomePage.vue';
 
 const routes: Array<RouteRecordRaw> = [
@@ -17,7 +17,7 @@ const routes: Array<RouteRecordRaw> = [
 ];
 
 const router = createRouter({
-  history: createWebHistory('http://localhost:5137'),
+  history: createWebHistory(),
   routes
 });
 
