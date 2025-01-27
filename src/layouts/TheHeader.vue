@@ -1,5 +1,5 @@
 <template>
-  <header>
+  <header class="header">
     <nav>
       <ul>
         <li><a href="/">Home</a></li>
@@ -25,6 +25,7 @@ header {
   background-color: #333;
   color: white;
   padding: 1rem;
+  width: 100%;
 }
 
 nav ul {

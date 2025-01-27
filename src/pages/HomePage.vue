@@ -20,15 +20,15 @@
             <div class="skills-grid">
                 <div class="skill-card">
                     <h3>Frontend</h3>
-                    <p>HTML, CSS, JavaScript, React</p>
+                    <p class="skill-card__text">HTML, CSS, JavaScript, React</p>
                 </div>
                 <div class="skill-card">
                     <h3>Backend</h3>
-                    <p>Node.js, Express</p>
+                    <p class="skill-card__text">Node.js, Express</p>
                 </div>
                 <div class="skill-card">
                     <h3>Database</h3>
-                    <p>MongoDB, PostgreSQL</p>
+                    <p class="skill-card__text">MongoDB, PostgreSQL</p>
                 </div>
             </div>
         </div>
@@ -43,14 +43,14 @@
                     <div class="project-image"></div>
                     <div class="project-content">
                         <h3>Проект 1</h3>
-                        <p>Описание проекта</p>
+                        <p class="skill-card__text">Описание проекта</p>
                     </div>
                 </article>
                 <article class="project-card">
                     <div class="project-image"></div>
                     <div class="project-content">
                         <h3>Проект 2</h3>
-                        <p>Описание проекта</p>
+                        <p class="skill-card__text">Описание проекта</p>
                     </div>
                 </article>
             </div>
@@ -198,7 +198,7 @@ body {
 
 .button-secondary {
   border: 1px solid #475569;
-  color: #fff;
+  color: #34d399;
 }
 
 .about {
@@ -209,6 +209,7 @@ body {
 .section-title {
   font-size: 32px;
   margin-bottom: 48px;
+  color: #fff;
 }
 
 .skills-grid {
@@ -270,6 +271,15 @@ body {
   border: 1px solid #475569;
   border-radius: 8px;
   color: #fff;
+}
+
+h3 {
+  font-size: 24px;
+  color: #fff;
+}
+
+.skill-card__text {
+  color: #94a3b8;
 }
 
 @media (max-width: 768px) {
