@@ -3,71 +3,99 @@
   <div class="min-h-screen bg-slate-900 text-white">
     <!-- Hero Section -->
     <header class="hero">
-        <div class="container">
-            <h1>Привет, я <span class="highlight">Frontend Разработчик</span></h1>
-            <p>Создаю современные веб-приложения</p>
-            <div class="button-group">
-                <a href="#contact" class="button button-primary">Связаться</a>
-                <a href="#projects" class="button button-secondary">Мои проекты</a>
-            </div>
+      <div class="container">
+        <h1>Привет, я <span class="highlight">Frontend Разработчик</span></h1>
+        <p>Создаю современные веб-приложения</p>
+        <div class="button-group">
+          <a href="#contact" class="button button-primary">Связаться</a>
+          <a href="#projects" class="button button-secondary">Мои проекты</a>
         </div>
+      </div>
     </header>
 
     <!-- About Section -->
     <section class="about" id="about">
-        <div class="container">
-            <h2 class="section-title">Обо мне</h2>
-            <div class="skills-grid">
-                <div class="skill-card">
-                    <h3>Frontend</h3>
-                    <p class="skill-card__text">HTML, CSS, JavaScript, React</p>
-                </div>
-                <div class="skill-card">
-                    <h3>Backend</h3>
-                    <p class="skill-card__text">Node.js, Express</p>
-                </div>
-                <div class="skill-card">
-                    <h3>Database</h3>
-                    <p class="skill-card__text">MongoDB, PostgreSQL</p>
-                </div>
-            </div>
+      <div class="container">
+        <h2 class="section-title">Обо мне</h2>
+        <div class="skills-grid">
+          <div class="skill-card">
+            <h3>Frontend</h3>
+            <p class="skill-card__text">HTML, CSS, JavaScript, React</p>
+          </div>
+          <div class="skill-card">
+            <h3>Backend</h3>
+            <p class="skill-card__text">Node.js, Express</p>
+          </div>
+          <div class="skill-card">
+            <h3>Database</h3>
+            <p class="skill-card__text">MongoDB, PostgreSQL</p>
+          </div>
         </div>
+      </div>
     </section>
 
     <!-- Projects Section -->
     <section class="projects" id="projects">
-        <div class="container">
-            <h2 class="section-title">Проекты</h2>
-            <div class="projects-grid">
-                <article class="project-card">
-                    <div class="project-image"></div>
-                    <div class="project-content">
-                        <h3>Проект 1</h3>
-                        <p class="skill-card__text">Описание проекта</p>
-                    </div>
-                </article>
-                <article class="project-card">
-                    <div class="project-image"></div>
-                    <div class="project-content">
-                        <h3>Проект 2</h3>
-                        <p class="skill-card__text">Описание проекта</p>
-                    </div>
-                </article>
+      <div class="container">
+        <h2 class="section-title">Проекты</h2>
+        <div class="projects-grid">
+          <article class="project-card">
+            <div class="project-image"></div>
+            <div class="project-content">
+              <h3>Проект 1</h3>
+              <p class="skill-card__text">Описание проекта</p>
             </div>
+          </article>
+          <article class="project-card">
+            <div class="project-image"></div>
+            <div class="project-content">
+              <h3>Проект 2</h3>
+              <p class="skill-card__text">Описание проекта</p>
+            </div>
+          </article>
         </div>
+      </div>
     </section>
 
     <!-- Contact Section -->
     <section class="contact" id="contact">
-        <div class="container">
-            <h2 class="section-title">Контакты</h2>
-            <form class="contact-form">
-                <input type="text" class="form-input" placeholder="Ваше имя" required>
-                <input type="email" class="form-input" placeholder="Email" required>
-                <textarea class="form-input" placeholder="Сообщение" required></textarea>
-                <button type="submit" class="button button-primary">Отправить</button>
-            </form>
+      <div class="container">
+        <h2 class="section-title">Контакты</h2>
+        <form class="contact-form">
+          <input
+            type="text"
+            class="form-input"
+            placeholder="Ваше имя"
+            required
+          />
+          <input type="email" class="form-input" placeholder="Email" required />
+          <textarea
+            class="form-input"
+            placeholder="Сообщение"
+            required
+          ></textarea>
+          <button type="submit" class="button button-primary">Отправить</button>
+        </form>
+      </div>
+    </section>
+    <section class="media">
+      <div class="container">
+        <h2 class="section-title">Media</h2>
+        <div class="media-grid">
+          <div class="media-card">
+            <img src="@/assets/icons/github.svg" alt="Github logo.">
+            <a class="skill-card__text">Github</a>
+          </div>
+          <div class="media-card">
+            <img src="" alt="Telegram logo.">
+            <a class="skill-card__text">TG</a>
+          </div>
+          <div class="media-card">
+            <img src="" alt="email logo.">
+            <a class="skill-card__text">Email</a>
+          </div>
         </div>
+      </div>
     </section>
   </div>
 </template>
@@ -153,7 +181,7 @@ body {
 }
 
 .container {
-  max-width: 1200px;
+  width: 100%;
   margin: 0 auto;
   padding: 0 20px;
 }
@@ -179,6 +207,7 @@ body {
 
 .button-group {
   display: flex;
+  justify-content: center;
   gap: 16px;
 }
 
@@ -259,8 +288,11 @@ body {
 }
 
 .contact-form {
-  max-width: 600px;
+  max-width: 660px;
+  padding: 2rem;
   margin: 0 auto;
+  background: #334155;
+  border-radius: 8px;
 }
 
 .form-input {
@@ -280,6 +312,33 @@ h3 {
 
 .skill-card__text {
   color: #94a3b8;
+}
+
+.media {
+  width: 100%;
+  .media-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    place-items: center;
+    .media-card {
+    display: flex;
+    gap: .75rem;
+    align-items: center;
+    img {
+      width: 24px;
+      height: 24px;
+    }
+  }
+  }
+}
+
+.media .container{
+  padding: 3rem 0;
+  display: flex;
+  gap: .5rem;
+  flex-direction: column;
+  width: 100%;
+  background: #334155
 }
 
 @media (max-width: 768px) {
