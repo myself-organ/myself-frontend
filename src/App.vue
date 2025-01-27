@@ -2,15 +2,18 @@
 // @ts-ignore
 import { defineComponent } from 'vue';
 import HelloWorld from './components/HelloWorld.vue';
+import TheHeader from './layouts/TheHeader.vue';
 
 export default defineComponent({
   components: {
     HelloWorld,
+    TheHeader
   },
 });
 </script>
 
 <template>
+  <the-header></the-header>
    <router-view class="wrapper" v-slot="slotProps">
     <transition name="route" mode="out-in">
       <component v-if="slotProps.Component" :is="slotProps.Component" class="component"></component>
