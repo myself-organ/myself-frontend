@@ -1,5 +1,9 @@
 <template>
+
   <header class="header">
+    <button>
+      <span>Afanasev Aleksander</span>
+    </button>
     <nav>
       <ul>
         <li><a href="/">Home</a></li>
@@ -11,21 +15,32 @@
 </template>
 
 <script setup>
-import { ref } from 'vue'
+import { ref } from 'vue';
 
-const isLoggedIn = ref(false)
+const isLoggedIn = ref(false);
 
 function toggleLogin() {
-  isLoggedIn.value = !isLoggedIn.value
+  isLoggedIn.value = !isLoggedIn.value;
 }
 </script>
 
 <style scoped>
-header {
-  background-color: #333;
-  color: white;
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   padding: 1rem;
-  width: 100%;
+  background-color: var(--color-primary);
+}
+
+.header__link {
+  color: var(--color-text-primary);
+  border-radius: 50%;
+  display: block;
+}
+
+.header__logo {
+  display: block;
 }
 
 nav ul {
