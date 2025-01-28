@@ -83,16 +83,28 @@
         <h2 class="section-title">Media</h2>
         <div class="media-grid">
           <div class="media-card">
-            <img src="@/assets/icons/github.svg" alt="Github logo.">
-            <a class="skill-card__text">Github</a>
+            <img src="@/assets/icons/github.svg" alt="Github logo." />
+            <a
+              class="skill-card__text"
+              target="_blank"
+              href="https://github.com/SubwaySerfer"
+              >Github</a
+            >
           </div>
           <div class="media-card">
-            <img src="" alt="Telegram logo.">
-            <a class="skill-card__text">TG</a>
+            <img src="@/assets/icons/tg.svg" alt="Telegram logo." />
+            <a
+              class="skill-card__text"
+              href="https://t.me/blade_runner_49"
+              target="_blank"
+              >@blade_runner_49</a
+            >
           </div>
           <div class="media-card">
-            <img src="" alt="email logo.">
-            <a class="skill-card__text">Email</a>
+            <img src="@/assets/icons/email.svg" alt="email logo." />
+            <a class="skill-card__text" href="mailto:subwayserfer.job@gmail.com"
+              >Email</a
+            >
           </div>
         </div>
       </div>
@@ -231,7 +243,6 @@ body {
 }
 
 .about {
-  background-color: #1e293b;
   padding: 80px 0;
 }
 
@@ -311,7 +322,13 @@ h3 {
 }
 
 .skill-card__text {
-  color: #94a3b8;
+  color: var(--color-black);
+  font-size: 1.25rem;
+  line-height: 1.5;
+  transition: opacity 0.3s;
+  &:hover {
+    opacity: .7;
+  }
 }
 
 .media {
@@ -321,24 +338,23 @@ h3 {
     grid-template-columns: repeat(3, 1fr);
     place-items: center;
     .media-card {
-    display: flex;
-    gap: .75rem;
-    align-items: center;
-    img {
-      width: 24px;
-      height: 24px;
+      display: flex;
+      gap: 0.75rem;
+      align-items: center;
+      img {
+        width: 24px;
+        height: 24px;
+      }
     }
-  }
   }
 }
 
-.media .container{
+.media .container {
   padding: 3rem 0;
   display: flex;
-  gap: .5rem;
+  gap: 0.5rem;
   flex-direction: column;
   width: 100%;
-  background: #334155
 }
 
 @media (max-width: 768px) {
