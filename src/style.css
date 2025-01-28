@@ -1,5 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@100..900&display=swap');
+
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  --color-black: #0d0d0d;
+  --color-primary: #364fe0;
+  --color-secondary: #ececec;
+  --color-black-light: #262626;
+  --color-white: #ffffff;
+  font-family: "Archivo", serif;
   line-height: 1.5;
   font-weight: 400;
 
@@ -23,6 +30,8 @@ a:hover {
 }
 
 body {
+  color: var(--color-black);
+
   margin: 0;
   display: flex;
   place-items: center;
