@@ -1,12 +1,10 @@
 <script lang="ts">
 // @ts-ignore
 import { defineComponent } from 'vue';
-import HelloWorld from './components/HelloWorld.vue';
 import TheHeader from './layouts/TheHeader.vue';
 
 export default defineComponent({
   components: {
-    HelloWorld,
     TheHeader
   },
 });

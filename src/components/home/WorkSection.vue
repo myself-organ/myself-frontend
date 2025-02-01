@@ -4,6 +4,7 @@
     <ul class="skills-list">
       <li v-for="work in works" :key="work.title" class="skill-card">
         <h3 class="skill-card__title">{{ work.title }}</h3>
+        <p class="skill-card__item work-title"><span>{{ work.ages }}</span> {{ work.subtitle }}</p>
         <p class="skill-card__item" v-for="exp in work.exps" :key="exp">
           {{ exp }}
         </p>
@@ -112,5 +113,13 @@ export default {
 }
 .item-mt {
   margin-top: 1rem;
+}
+.work-title {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: var(--color-black);
+  span {
+    color: var(--color-primary);
+  }
 }
 </style>
