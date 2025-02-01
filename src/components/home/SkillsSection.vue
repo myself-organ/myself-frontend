@@ -64,6 +64,9 @@ export default {
   align-items: center;
   width: 100%;
   margin: 4.375rem 0;
+  @media(max-width: 768px) {
+    margin: 2.5rem 0;
+  }
 }
 
 .skills-section__title {
@@ -72,6 +75,11 @@ export default {
   line-height: 1.5;
   align-self: start;
   padding-left: 20px;
+  @media(max-width: 768px) {
+    font-size: 2.5rem;
+    align-self: center;
+    padding-left: 0;
+  }
 }
 
 .skills-list {
@@ -79,6 +87,10 @@ export default {
   grid-template-columns: repeat(3, 1fr);
   gap: 1rem;
   width: 100%;
+  @media(max-width: 768px) {
+    grid-template-columns: 1fr;
+    max-width: 500px;
+  }
 }
 
 .skill-card {

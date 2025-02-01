@@ -2,7 +2,9 @@
   <section class="about-section">
     <h1 class="about-section__title">Afanasev Aleksander</h1>
     <div class="about-section__content">
-      <div class="image-wrapper"><img src="@/assets/images/Alex-1.jpg" alt="Alex's image." /></div>
+      <div class="image-wrapper">
+        <img width="100%" height="100%"  src="@/assets/images/Alex-1.jpg" alt="Alex's image." />
+      </div>
       <p class="about-section__text">
         I'm a full-stack developer experienced in building scalable web
         applications with Vue.js and Go. I also have a passion for music, books,
@@ -38,16 +40,30 @@ export default {
     align-items: start;
     justify-content: center;
     width: 100%;
+    @media (max-width: 1100px) {
+      padding: 0 10px;
+    }
+    @media (max-width: 768px) {
+      flex-direction: column;
+      padding: 20px;
+      align-items: center;
+    }
   }
   & .image-wrapper {
     display: flex;
     justify-content: center;
     align-self: center;
-    border-radius: .5rem;
+    border-radius: 0.5rem;
     background-color: #e7e7c5;
     height: 300px;
     max-width: 500px;
     width: 100%;
+    img {
+      object-fit: contain;
+    }
+    @media (max-width: 768px) {
+      height: auto;
+    }
   }
   & .about-section__text {
     font-size: 2rem;
@@ -55,6 +71,13 @@ export default {
     color: var(--color-black);
     text-align: start;
     max-width: 600px;
+    @media (max-width: 1100px) {
+      max-width: 450px;
+    }
+    @media (max-width: 768px) {
+      font-size: 1.75rem;
+      line-height: 1.3;
+    }
   }
 }
 </style>
