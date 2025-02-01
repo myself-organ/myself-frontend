@@ -1,83 +1,9 @@
 <!-- App.vue -->
 <template>
   <div class="min-h-screen bg-slate-900 text-white">
-    <!-- Hero Section -->
-    <header class="hero">
-      <div class="container">
-        <h1>Привет, я <span class="highlight">Frontend Разработчик</span></h1>
-        <p>Создаю современные веб-приложения</p>
-        <div class="button-group">
-          <a href="#contact" class="button button-primary">Связаться</a>
-          <a href="#projects" class="button button-secondary">Мои проекты</a>
-        </div>
-      </div>
-    </header>
-
-    <!-- About Section -->
-    <section class="about" id="about">
-      <div class="container">
-        <h2 class="section-title">Обо мне</h2>
-        <div class="skills-grid">
-          <div class="skill-card">
-            <h3>Frontend</h3>
-            <p class="skill-card__text">HTML, CSS, JavaScript, React</p>
-          </div>
-          <div class="skill-card">
-            <h3>Backend</h3>
-            <p class="skill-card__text">Node.js, Express</p>
-          </div>
-          <div class="skill-card">
-            <h3>Database</h3>
-            <p class="skill-card__text">MongoDB, PostgreSQL</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section class="projects" id="projects">
-      <div class="container">
-        <h2 class="section-title">Проекты</h2>
-        <div class="projects-grid">
-          <article class="project-card">
-            <div class="project-image"></div>
-            <div class="project-content">
-              <h3>Проект 1</h3>
-              <p class="skill-card__text">Описание проекта</p>
-            </div>
-          </article>
-          <article class="project-card">
-            <div class="project-image"></div>
-            <div class="project-content">
-              <h3>Проект 2</h3>
-              <p class="skill-card__text">Описание проекта</p>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section class="contact" id="contact">
-      <div class="container">
-        <h2 class="section-title">Контакты</h2>
-        <form class="contact-form">
-          <input
-            type="text"
-            class="form-input"
-            placeholder="Ваше имя"
-            required
-          />
-          <input type="email" class="form-input" placeholder="Email" required />
-          <textarea
-            class="form-input"
-            placeholder="Сообщение"
-            required
-          ></textarea>
-          <button type="submit" class="button button-primary">Отправить</button>
-        </form>
-      </div>
-    </section>
+    <about-section />
+    <skills-section />
+    <work-section />
     <section class="media">
       <div class="container">
         <h2 class="section-title">Media</h2>
@@ -114,6 +40,9 @@
 
 <script setup>
 import { ref } from 'vue';
+import AboutSection from '@/components/home/AboutSection.vue';
+import SkillsSection from '@/components/home/SkillsSection.vue';
+import WorkSection from '@/components/home/WorkSection.vue';
 
 const skills = [
   { title: 'Frontend', techs: 'Vue, React, Angular' },

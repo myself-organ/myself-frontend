@@ -4,13 +4,13 @@
       <span>Afanasev Aleksander</span>
     </a>
     <nav class="menu">
-      <ul class="menu-list">
+      <!-- <ul class="menu-list">
         <li class="menu__item"><a href="/" class="menu__link menu__link--active">Home</a></li>
         <li class="menu__item"><a href="/" class="menu__link">CV</a></li>
         <li class="menu__item">
           <a href="/" class="menu__link">Contact</a>
         </li>
-      </ul>
+      </ul> -->
     </nav>
   </header>
 </template>
