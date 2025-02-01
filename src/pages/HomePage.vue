@@ -3,6 +3,7 @@
   <div class="min-h-screen bg-slate-900 text-white">
     <about-section />
     <skills-section />
+    <work-section />
     <section class="media">
       <div class="container">
         <h2 class="section-title">Media</h2>
@@ -41,6 +42,7 @@
 import { ref } from 'vue';
 import AboutSection from '@/components/home/AboutSection.vue';
 import SkillsSection from '@/components/home/SkillsSection.vue';
+import WorkSection from '@/components/home/WorkSection.vue';
 
 const skills = [
   { title: 'Frontend', techs: 'Vue, React, Angular' },
