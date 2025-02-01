@@ -79,6 +79,9 @@ export default {
   align-items: center;
   width: 100%;
   margin: 4.375rem 0;
+  @media(max-width: 768px) {
+    margin: 2.5rem 0;
+  }
 }
 
 .skills-section__title {
@@ -87,6 +90,10 @@ export default {
   line-height: 1.5;
   align-self: start;
   padding-left: 20px;
+  @media(max-width: 768px) {
+    padding-left: 0;
+    align-self: center;
+  }
 }
 
 .skills-list {

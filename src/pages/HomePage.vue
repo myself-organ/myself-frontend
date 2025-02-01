@@ -275,6 +275,10 @@ h3 {
         height: 24px;
       }
     }
+    @media(max-width: 768px) {
+      grid-template-columns: 1fr;
+      grid-gap: .75rem;
+    }
   }
 }
 
