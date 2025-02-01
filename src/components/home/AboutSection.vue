@@ -3,7 +3,7 @@
     <h1 class="about-section__title">Afanasev Aleksander</h1>
     <div class="about-section__content">
       <div class="image-wrapper">
-        <img src="@/assets/images/Alex-1.jpg" alt="Alex's image." />
+        <img width="100%" height="100%"  src="@/assets/images/Alex-1.jpg" alt="Alex's image." />
       </div>
       <p class="about-section__text">
         I'm a full-stack developer experienced in building scalable web
@@ -58,6 +58,9 @@ export default {
     height: 300px;
     max-width: 500px;
     width: 100%;
+    img {
+      object-fit: contain;
+    }
     @media (max-width: 768px) {
       height: auto;
     }
