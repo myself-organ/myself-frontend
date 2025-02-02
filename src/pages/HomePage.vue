@@ -4,6 +4,7 @@
     <about-section />
     <skills-section />
     <work-section />
+    <project-list />
     <section class="media">
       <div class="container">
         <h2 class="section-title">Media</h2>
@@ -43,6 +44,7 @@ import { ref } from 'vue';
 import AboutSection from '@/components/home/AboutSection.vue';
 import SkillsSection from '@/components/home/SkillsSection.vue';
 import WorkSection from '@/components/home/WorkSection.vue';
+import ProjectList from '@/components/home/ProjectList.vue';
 
 const skills = [
   { title: 'Frontend', techs: 'Vue, React, Angular' },
@@ -256,7 +258,7 @@ h3 {
   line-height: 1.5;
   transition: opacity 0.3s;
   &:hover {
-    opacity: .7;
+    opacity: 0.7;
   }
 }
 
@@ -275,9 +277,9 @@ h3 {
         height: 24px;
       }
     }
-    @media(max-width: 768px) {
+    @media (max-width: 768px) {
       grid-template-columns: 1fr;
-      grid-gap: .75rem;
+      grid-gap: 0.75rem;
     }
   }
 }
