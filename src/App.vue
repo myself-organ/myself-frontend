@@ -2,22 +2,29 @@
 // @ts-ignore
 import { defineComponent } from 'vue';
 import TheHeader from './layouts/TheHeader.vue';
+import TheFooter from './layouts/TheFooter.vue';
 
 export default defineComponent({
   components: {
-    TheHeader
+    TheHeader,
+    TheFooter,
   },
 });
 </script>
 
 <template>
   <the-header></the-header>
-   <router-view class="wrapper" v-slot="slotProps">
+  <router-view class="wrapper" v-slot="slotProps">
     <transition name="route" mode="out-in">
-      <component v-if="slotProps.Component" :is="slotProps.Component" class="component"></component>
+      <component
+        v-if="slotProps.Component"
+        :is="slotProps.Component"
+        class="component"
+      ></component>
       <div v-else>No component found</div>
     </transition>
   </router-view>
+  <the-footer></the-footer>
 </template>
 
 <style scoped>
