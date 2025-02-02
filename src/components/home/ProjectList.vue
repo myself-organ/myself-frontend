@@ -75,11 +75,10 @@ export default defineComponent({
 .project-list {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
-  /* display: flex; */
-  /* flex-direction: row; */
   gap: 1.25rem;
   align-items: center;
   width: 100%;
+  padding: 0 10px;
 }
 .project-card {
   display: flex;

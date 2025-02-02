@@ -5,108 +5,14 @@
     <skills-section />
     <work-section />
     <project-list />
-    <section class="media">
-      <div class="container">
-        <h2 class="section-title">Media</h2>
-        <div class="media-grid">
-          <div class="media-card">
-            <img src="@/assets/icons/github.svg" alt="Github logo." />
-            <a
-              class="skill-card__text"
-              target="_blank"
-              href="https://github.com/SubwaySerfer"
-              >Github</a
-            >
-          </div>
-          <div class="media-card">
-            <img src="@/assets/icons/tg.svg" alt="Telegram logo." />
-            <a
-              class="skill-card__text"
-              href="https://t.me/blade_runner_49"
-              target="_blank"
-              >@blade_runner_49</a
-            >
-          </div>
-          <div class="media-card">
-            <img src="@/assets/icons/email.svg" alt="email logo." />
-            <a class="skill-card__text" href="mailto:subwayserfer.job@gmail.com"
-              >Email</a
-            >
-          </div>
-        </div>
-      </div>
-    </section>
   </div>
 </template>
 
 <script setup>
-import { ref } from 'vue';
 import AboutSection from '@/components/home/AboutSection.vue';
 import SkillsSection from '@/components/home/SkillsSection.vue';
 import WorkSection from '@/components/home/WorkSection.vue';
 import ProjectList from '@/components/home/ProjectList.vue';
-
-const skills = [
-  { title: 'Frontend', techs: 'Vue, React, Angular' },
-  { title: 'Backend', techs: 'Node.js, Express' },
-  { title: 'Database', techs: 'MongoDB, PostgreSQL' },
-  { title: 'Tools', techs: 'Git, Docker, AWS' },
-];
-
-const projects = [
-  {
-    id: 1,
-    title: 'Проект 1',
-    description: 'Описание проекта и использованных технологий',
-    image: '/placeholder-1.jpg',
-    github: '#',
-    demo: '#',
-  },
-  {
-    id: 2,
-    title: 'Проект 2',
-    description: 'Описание проекта и использованных технологий',
-    image: '/placeholder-2.jpg',
-    github: '#',
-    demo: '#',
-  },
-  {
-    id: 3,
-    title: 'Проект 3',
-    description: 'Описание проекта и использованных технологий',
-    image: '/placeholder-3.jpg',
-    github: '#',
-    demo: '#',
-  },
-];
-
-const experience = [
-  {
-    id: 1,
-    title: 'Senior Frontend Developer',
-    company: 'Компания',
-    period: '2020 - Настоящее время',
-    description: 'Описание обязанностей и достижений на позиции',
-  },
-  {
-    id: 2,
-    title: 'Frontend Developer',
-    company: 'Компания',
-    period: '2018 - 2020',
-    description: 'Описание обязанностей и достижений на позиции',
-  },
-];
-
-const form = ref({
-  name: '',
-  email: '',
-  message: '',
-});
-
-const handleSubmit = () => {
-  console.log('Form submitted:', form.value);
-  // Здесь будет логика отправки формы
-};
 </script>
 
 <style scoped>
@@ -260,36 +166,6 @@ h3 {
   &:hover {
     opacity: 0.7;
   }
-}
-
-.media {
-  width: 100%;
-  .media-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    place-items: center;
-    .media-card {
-      display: flex;
-      gap: 0.75rem;
-      align-items: center;
-      img {
-        width: 24px;
-        height: 24px;
-      }
-    }
-    @media (max-width: 768px) {
-      grid-template-columns: 1fr;
-      grid-gap: 0.75rem;
-    }
-  }
-}
-
-.media .container {
-  padding: 3rem 0;
-  display: flex;
-  gap: 0.5rem;
-  flex-direction: column;
-  width: 100%;
 }
 
 @media (max-width: 768px) {
