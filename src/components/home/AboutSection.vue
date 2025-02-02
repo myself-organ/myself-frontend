@@ -17,7 +17,6 @@
 <script>
 export default {
   name: 'AboutSection',
-  // ...existing code...
 };
 </script>
 
@@ -63,6 +62,9 @@ export default {
     }
     @media (max-width: 768px) {
       height: auto;
+      img {
+        border-radius: 0.5rem;
+      }
     }
   }
   & .about-section__text {
