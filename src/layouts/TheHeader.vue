@@ -11,18 +11,27 @@
           <a href="/" class="menu__link">Contact</a>
         </li>
       </ul> -->
+      <ul class="menu-list">
+        <li class="menu__item">
+          <button @click="toggleTheme" class="theme-toggle">
+            {{ currentTheme === 'light' ? '🌙' : '☀️' }}
+          </button>
+        </li>
+      </ul>
     </nav>
   </header>
 </template>
 
 <script setup>
-import { ref } from 'vue';
+import { ref, onMounted } from 'vue';
+import { useTheme } from '@/utils/useTheme';
 
+const { currentTheme, toggleTheme, initTheme } = useTheme();
 const isLoggedIn = ref(false);
 
-function toggleLogin() {
-  isLoggedIn.value = !isLoggedIn.value;
-}
+onMounted(() => {
+  initTheme();
+});
 </script>
 
 <style scoped>
@@ -69,6 +78,19 @@ function toggleLogin() {
   line-height: 1.5;
   &:hover {
     opacity: 0.6;
+  }
+}
+.theme-toggle {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 1.25rem;
+  padding: 0.15em 0.5em;
+  border-radius: 2px;
+  transition: opacity 0.3s;
+  opacity: 0.6;
+  &:hover {
+    opacity: 1;
   }
 }
 </style>

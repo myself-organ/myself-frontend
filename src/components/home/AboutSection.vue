@@ -3,7 +3,12 @@
     <h1 class="about-section__title">Afanasev Aleksander</h1>
     <div class="about-section__content">
       <div class="image-wrapper">
-        <img width="100%" height="100%"  src="@/assets/images/Alex-1.jpg" alt="Alex's image." />
+        <img
+          width="100%"
+          height="100%"
+          src="@/assets/images/Alex-1.jpg"
+          alt="Alex's image."
+        />
       </div>
       <p class="about-section__text">
         I'm a full-stack developer experienced in building scalable web
@@ -31,6 +36,9 @@ export default {
     font-size: 3rem;
     color: var(--color-black);
     line-height: 1.5;
+    @media (max-widht: 768px) {
+      font-size: 2rem;
+    }
   }
   & .about-section__content {
     display: flex;
