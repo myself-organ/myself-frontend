@@ -79,6 +79,9 @@ export default defineComponent({
   align-items: center;
   width: 100%;
   padding: 0 10px;
+  @media(max-width: 500) {
+    grid-template-columns: 1fr;
+  }
 }
 .project-card {
   display: flex;
@@ -86,11 +89,12 @@ export default defineComponent({
   gap: 0.75rem;
   padding: 1.25rem;
   border-radius: 0.5rem;
-  background-color: #f9f9f9;
+  background-color: var(--color-gray);;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s;
   height: 100%;
   text-align: start;
+  color: var(--color-text);
 }
 .project-card__title {
   font-size: 1.75rem;
@@ -106,5 +110,9 @@ export default defineComponent({
   font-size: 1rem;
   line-height: 1.5;
   color: #333;
+}
+.project-card__link {
+  width: min-content;
+  padding: 5px 5px 5px 0;
 }
 </style>
