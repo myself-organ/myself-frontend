@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Archivo:wght@100..900&display=swap');
 
 :root {
-  --color-black: #0d0d0d;
+  --color-black: #030303;
   --color-primary: #364fe0;
   --color-secondary: #ececec;
   --color-black-light: #262626;
@@ -33,7 +33,7 @@ a:hover {
 
 body {
   color: var(--color-black);
-  background: var(--color-background);
+  background: var(--color-black);
   margin: 0;
   display: flex;
   place-items: center;

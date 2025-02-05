@@ -86,7 +86,7 @@ export default {
 
 .skills-section__title {
   font-size: 3rem;
-  color: var(--color-black);
+  color: var(--color-white-light);
   line-height: 1.5;
   align-self: start;
   padding-left: 20px;
@@ -114,7 +114,7 @@ export default {
 }
 .skill-card__item {
   list-style: outside;
-  color: var(--color-black);
+  color: var(--color-white-light);
   font-size: 1.25rem;
   line-height: 1.5;
 }
@@ -124,7 +124,7 @@ export default {
 .work-title {
   font-size: 1.5rem;
   font-weight: 500;
-  color: var(--color-black);
+  color: var(--color-white-light);
   span {
     color: var(--color-primary);
   }
