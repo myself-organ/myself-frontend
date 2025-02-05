@@ -4,7 +4,7 @@
       class="about-image"
       width="120"
       height="120"
-      src="@/assets/images/Alex-1.jpg"
+      src="@/assets/images/alex-1.jpg"
       alt="Afanasev Aleksandr photo."
     />
     <h1 class="about-section__title">
