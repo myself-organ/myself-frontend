@@ -79,7 +79,7 @@ export default defineComponent({
   align-items: center;
   width: 100%;
   padding: 0 10px;
-  @media(max-width: 500) {
+  @media(max-width: 500px) {
     grid-template-columns: 1fr;
   }
 }

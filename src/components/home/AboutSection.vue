@@ -1,21 +1,18 @@
 <template>
   <section class="about-section">
-    <h1 class="about-section__title">Afanasev Aleksander</h1>
-    <div class="about-section__content">
-      <div class="image-wrapper">
-        <img
-          width="100%"
-          height="100%"
-          src="@/assets/images/Alex-1.jpg"
-          alt="Alex's image."
-        />
-      </div>
-      <p class="about-section__text">
-        I'm a full-stack developer experienced in building scalable web
-        applications with Vue.js and Go. I also have a passion for music, books,
-        and data.
-      </p>
-    </div>
+    <img
+      class="about-image"
+      width="120"
+      height="120"
+      src="@/assets/images/alex-1.jpg"
+      alt="Afanasev Aleksandr photo."
+    />
+    <h1 class="about-section__title">
+      I’m a full-stack developer experienced in building scalable web
+      applications with <span class="title-vue">Vue.js</span> and
+      <span class="title-go">Go</span>. I also have a passion for music, books,
+      and data.
+    </h1>
   </section>
 </template>
 
@@ -29,65 +26,37 @@ export default {
 .about-section {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
-  align-items: center;
+  gap: 1.25rem;
+  align-items: start;
   width: 100%;
-  & .about-section__title {
-    font-size: 3rem;
-    color: var(--color-black);
-    line-height: 1.5;
-    @media (max-widht: 768px) {
-      font-size: 2rem;
-    }
+  padding: 0 2rem;
+  margin-bottom: 10rem;
+  margin-top: 12.5rem;
+}
+.about-section__title {
+  font-weight: 500;
+  font-size: 3.75rem;
+  line-height: 110%;
+  color: var(--color-white-light);
+  text-align: start;
+  max-width: 71.25rem;
+  & .title-vue {
+    background: linear-gradient(39deg, #0dff00 0%, #d4ff00 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
-  & .about-section__content {
-    display: flex;
-    flex-direction: row;
-    gap: 1.5rem;
-    align-items: start;
-    justify-content: center;
-    width: 100%;
-    @media (max-width: 1100px) {
-      padding: 0 10px;
-    }
-    @media (max-width: 768px) {
-      flex-direction: column;
-      padding: 20px;
-      align-items: center;
-    }
+  & .title-go {
+    background: linear-gradient(24deg, #0dff00 0%, #d4ff00 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
-  & .image-wrapper {
-    display: flex;
-    justify-content: center;
-    align-self: center;
-    border-radius: 0.5rem;
-    background-color: #e7e7c5;
-    height: 300px;
-    max-width: 500px;
-    width: 100%;
-    img {
-      object-fit: contain;
-    }
-    @media (max-width: 768px) {
-      height: auto;
-      img {
-        border-radius: 0.5rem;
-      }
-    }
+  @media(max-width: 768px) {
+    font-size: 2.5rem;
   }
-  & .about-section__text {
-    font-size: 2rem;
-    line-height: 1.5;
-    color: var(--color-black);
-    text-align: start;
-    max-width: 600px;
-    @media (max-width: 1100px) {
-      max-width: 450px;
-    }
-    @media (max-width: 768px) {
-      font-size: 1.75rem;
-      line-height: 1.3;
-    }
-  }
+}
+.about-image {
+  border-radius: 5rem;
 }
 </style>

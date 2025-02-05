@@ -159,7 +159,7 @@ h3 {
 }
 
 .skill-card__text {
-  color: var(--color-black);
+  color: var(--color-white-light);
   font-size: 1.25rem;
   line-height: 1.5;
   transition: opacity 0.3s;

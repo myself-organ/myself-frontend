@@ -1,12 +1,22 @@
 <template>
   <section class="skills-section">
-    <h2 class="skills-section__title">Skills</h2>
     <ul class="skills-list">
       <li v-for="skill in skills" :key="skill.title" class="skill-card">
         <h3 class="skill-card__title">{{ skill.title }}</h3>
-        <p class="skill-card__item" v-for="tech in skill.techs" :key="tech">
-          {{ tech }}
-        </p>
+        <div class="skill-card__items">
+          <template v-for="tech in skill.techs" :key="tech">
+            <template v-if="Array.isArray(tech)">
+              <p class="skill-card__item">
+                {{ tech[0] }}
+                <span class="skill-card__item--secondary">{{ tech[1] }}</span>
+              </p>
+            </template>
+
+            <template v-else>
+              <p class="skill-card__item">{{ tech }}</p>
+            </template>
+          </template>
+        </div>
       </li>
     </ul>
   </section>
@@ -21,7 +31,7 @@ export default {
         {
           title: 'Frontend',
           techs: [
-            'Vue.js ecosystem (Vuex, Vue Router, Composition API)',
+            ['Vue 2 / 3', '(Vuex, Vue Router, Composition API, Pinia)'],
             'Nuxt 3, Vite',
             'TypeScript',
             'JavaScript',
@@ -32,7 +42,7 @@ export default {
         {
           title: 'Backend',
           techs: [
-            'Go (Gin, gRPC, Protocol Buffers)',
+            ['Go', '(Gin, gRPC, Protocol Buffers)'],
             'GORM',
             'PostgreSQL, MySQL',
             'MongoDB',
@@ -64,48 +74,68 @@ export default {
   align-items: center;
   width: 100%;
   margin: 4.375rem 0;
-  @media(max-width: 768px) {
+  @media (max-width: 768px) {
     margin: 2.5rem 0;
-  }
-}
-
-.skills-section__title {
-  font-size: 3rem;
-  color: var(--color-black);
-  line-height: 1.5;
-  align-self: start;
-  padding-left: 20px;
-  @media(max-width: 768px) {
-    font-size: 2.5rem;
-    align-self: center;
-    padding-left: 0;
   }
 }
 
 .skills-list {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(420px, 1fr));;
   width: 100%;
-  @media(max-width: 768px) {
+  row-gap: 2rem;
+  @media (max-width: 768px) {
     grid-template-columns: 1fr;
     max-width: 500px;
   }
 }
 
 .skill-card {
-  padding: 1rem;
+  padding: 0 2rem;
   text-align: start;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 4.5rem;
 }
 .skill-card__title {
-  font-size: 1.75rem;
-  line-height: 1.5;
   font-weight: 500;
+  font-size: 1.75rem;
+  line-height: 110%;
+  color: var(--color-white-light);
 }
 .skill-card__item {
-  list-style: outside;
-  color: var(--color-black);
-  font-size: 1.25rem;
-  line-height: 1.5;
+  font-weight: 500;
+  font-size: 1.19rem;
+  line-height: 120%;
+  color: var(--color-white-light);
+}
+.skill-card__item--secondary {
+  color: var(--color-gray);
+  text-wrap: nowrap;
+  @media(max-width: 425px) {
+    text-wrap: wrap;
+  }
+}
+.skill-card__items {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.skill-card:nth-child(2),
+.skill-card:nth-child(3) {
+  border-left: 1px solid var(--color-white-light);
+  padding-left: 2rem;
+}
+@media(max-width: 1260px) {
+  .skill-card:nth-child(3) {
+    border-left: none;
+  }
+}
+@media(max-width: 840px) {
+  .skill-card:nth-child(2) {
+    border-left: none;
+  }
 }
 </style>

@@ -23,15 +23,6 @@
 </template>
 
 <script setup>
-import { ref, onMounted } from 'vue';
-import { useTheme } from '@/utils/useTheme';
-
-const { currentTheme, toggleTheme, initTheme } = useTheme();
-const isLoggedIn = ref(false);
-
-onMounted(() => {
-  initTheme();
-});
 </script>
 
 <style scoped>
@@ -51,7 +42,7 @@ onMounted(() => {
 }
 
 .menu__link {
-  color: var(--color-black);
+  color: var(--color-white-light);
   border-radius: 2px;
   padding: 0.15em 0.5em;
   text-decoration: underline;
@@ -73,7 +64,7 @@ onMounted(() => {
   background: transparent;
   cursor: pointer;
   transition: opacity 0.3s;
-  color: var(--color-black);
+  color: var(--color-white-light);
   font-size: 1.5rem;
   line-height: 1.5;
   &:hover {
