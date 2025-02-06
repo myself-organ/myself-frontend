@@ -251,7 +251,7 @@ export default {
   color: #6fff00;
 }
 .skill-card__title__position {
-  color: #808080;
+  color: var(--color-gray);
 }
 .skill-card__title__country {
   color: #6fff00;
