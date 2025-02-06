@@ -36,6 +36,10 @@ export default defineComponent({
   display: flex;
   align-items: center;
   justify-content: space-between;
+  @media(max-width: 700px) {
+    flex-direction: column;
+    gap: .75rem;
+  }
 }
 .menu-list {
   margin: 0;

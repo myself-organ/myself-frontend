@@ -85,6 +85,7 @@ export default defineComponent({
   align-items: center;
   width: 100%;
   min-height: 30.12rem;
+  row-gap: 2rem;
   /* padding: 0 10px; */
   @media (max-width: 500px) {
     grid-template-columns: 1fr;
@@ -107,6 +108,16 @@ export default defineComponent({
 }
 .project-card:not(:first-child) {
   border-left: 1px solid var(--color-white-light);
+}
+@media (max-width: 1200px) {
+  .project-card:nth-child(3) {
+    border-left: 0;
+  }
+}
+@media (max-width: 800px) {
+  .project-card:nth-child(2) {
+    border-left: 0;
+  }
 }
 .project-card__title {
   font-weight: 500;

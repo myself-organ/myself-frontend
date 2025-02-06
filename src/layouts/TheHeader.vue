@@ -33,6 +33,10 @@
   justify-content: space-between;
   align-items: center;
   padding: 1.75rem 2rem;
+  @media(max-width: 450px) {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
 }
 
 .menu-list {
@@ -41,6 +45,9 @@
   list-style: none;
   display: flex;
   gap: 2rem;
+  @media(max-width: 450px) {
+    gap: .75rem;
+  }
 }
 
 .menu__link {
