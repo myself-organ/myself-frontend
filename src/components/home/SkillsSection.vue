@@ -80,8 +80,8 @@ export default {
 }
 
 .skills-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(420px, 1fr));;
+  display: flex;
+  flex-wrap: wrap;
   width: 100%;
   row-gap: 2rem;
   @media (max-width: 768px) {
@@ -91,13 +91,15 @@ export default {
 }
 
 .skill-card {
+  flex: 1;
   padding: 0 2rem;
   text-align: start;
-  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   gap: 4.5rem;
+  max-width: 26rem;
+  min-height: 300px;
 }
 .skill-card__title {
   font-weight: 500;
@@ -128,7 +130,7 @@ export default {
   border-left: 1px solid var(--color-white-light);
   padding-left: 2rem;
 }
-@media(max-width: 1260px) {
+@media(max-width: 1000px) {
   .skill-card:nth-child(3) {
     border-left: none;
   }
