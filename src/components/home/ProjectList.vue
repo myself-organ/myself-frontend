@@ -9,8 +9,9 @@
         <!-- <a :href="project.github">GitHub</a> -->
         <p class="project-card__stack">{{ project.stack }}</p>
         <a target="_blank" class="project-card__link" :href="project.demo"
-          >Demo</a
-        >
+          >Demo
+          <img src="@/assets/icons/arrow.svg" alt="green arrow." loading="lazy"
+        /></a>
       </li>
     </ul>
   </section>
@@ -65,54 +66,87 @@ export default defineComponent({
 
 <style scoped>
 .projects-section {
-  margin: 7rem 0;
+  margin: 3.75rem 0 7rem;
+  /* padding: 0 2rem; */
 }
 .projects-section__title {
-  font-size: 2.5rem;
-  margin-bottom: 2rem;
-  line-height: 1.5;
+  margin-bottom: 5rem;
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 3.75rem;
+  line-height: 110%;
+  color: var(--color-white-light);
+  text-align: start;
+  padding: 0 2rem;
 }
 .project-list {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
-  gap: 1.25rem;
   align-items: center;
   width: 100%;
-  padding: 0 10px;
-  @media(max-width: 500px) {
+  min-height: 30.12rem;
+  row-gap: 2rem;
+  /* padding: 0 10px; */
+  @media (max-width: 500px) {
     grid-template-columns: 1fr;
   }
 }
 .project-card {
   display: flex;
   flex-direction: column;
-  gap: 0.75rem;
-  padding: 1.25rem;
-  border-radius: 0.5rem;
-  background-color: var(--color-gray);;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s;
+  /* gap: 0.75rem; */
+  /* padding: 1.25rem; */
+  /* border-radius: 0.5rem; */
+  /* background-color: var(--color-gray); */
   height: 100%;
   text-align: start;
-  color: var(--color-text);
+  color: var(--color-white-light);
+  font-weight: 500;
+  font-size: 1.19rem;
+  line-height: 132%;
+  padding: 0 2rem;
+}
+.project-card:not(:first-child) {
+  border-left: 1px solid var(--color-white-light);
+}
+@media (max-width: 1200px) {
+  .project-card:nth-child(3) {
+    border-left: 0;
+  }
+}
+@media (max-width: 800px) {
+  .project-card:nth-child(2) {
+    border-left: 0;
+  }
 }
 .project-card__title {
+  font-weight: 500;
   font-size: 1.75rem;
-  line-height: 1.3;
-  font-weight: 600;
+  line-height: 110%;
+  margin-bottom: 5rem;
 }
 .project-card__desc {
   font-size: 1rem;
   line-height: 1.5;
   flex: 1;
+  margin-bottom: 1.5rem;
 }
 .project-card__stack {
-  font-size: 1rem;
-  line-height: 1.5;
-  color: #333;
+  margin-bottom: 1.5rem;
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 1.19rem;
+  line-height: 132%;
+  color: var(--color-gray);
 }
 .project-card__link {
-  width: min-content;
-  padding: 5px 5px 5px 0;
+  width: fit-content;
+  font-weight: 500;
+  font-size: 1.19rem;
+  line-height: 120%;
+  color: #6fff00;
+  display: flex;
+  align-items: center;
+  gap: 4px;
 }
 </style>
