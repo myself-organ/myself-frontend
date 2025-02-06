@@ -1,33 +1,24 @@
 <template>
   <footer class="footer">
-    <div class="container">
-      <div class="footer-grid">
-        <div class="footer-card">
-          <img src="@/assets/icons/github.svg" alt="Github logo." />
-          <a
-            class="link-text"
-            target="_blank"
-            href="https://github.com/SubwaySerfer"
-            >Github</a
-          >
-        </div>
-        <div class="footer-card">
-          <img src="@/assets/icons/tg.svg" alt="Telegram logo." />
-          <a
-            class="link-text"
-            href="https://t.me/blade_runner_49"
-            target="_blank"
-            >@blade_runner_49</a
-          >
-        </div>
-        <div class="footer-card">
-          <img src="@/assets/icons/email.svg" alt="email logo." />
-          <a class="link-text" href="mailto:subwayserfer.job@gmail.com"
-            >Email</a
-          >
-        </div>
-      </div>
-    </div>
+    <p class="footer-info">© 2025 Alexander Afanasjev, All Rights Reserved.</p>
+
+    <ul class="menu-list">
+      <li class="menu__item">
+        <a
+          href="https://github.com/SubwaySerfer"
+          class="menu__link"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          GitHub</a
+        >
+      </li>
+      <li class="menu__item">
+        <router-link to="/" class="menu__link" style="cursor: no-drop"
+          >Contact</router-link
+        >
+      </li>
+    </ul>
   </footer>
 </template>
 
@@ -41,41 +32,29 @@ export default defineComponent({
 <style scoped>
 .footer {
   width: 100%;
-  .footer-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    place-items: center;
-    .footer-card {
-      display: flex;
-      gap: 0.75rem;
-      align-items: center;
-      img {
-        width: 24px;
-        height: 24px;
-      }
-    }
-    @media (max-width: 768px) {
-      grid-template-columns: 1fr;
-      grid-gap: 0.75rem;
-    }
-  }
-}
-
-.footer .container {
-  padding: 3rem 0;
+  padding: 2.5rem 2rem;
   display: flex;
-  gap: 0.5rem;
-  flex-direction: column;
-  width: 100%;
+  align-items: center;
+  justify-content: space-between;
 }
-
-.link-text {
+.menu-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  gap: 40px;
+}
+.footer-info {
+font-weight: 500;
+font-size: 1.19rem;
+line-height: 120%;
+color: var(--color-white-light);
+}
+.menu__link {
+  font-weight: 500;
+  font-size: 1.19rem;
+  line-height: 120%;
   color: var(--color-white-light);
-  font-size: 1.25rem;
-  line-height: 1.5;
-  transition: opacity 0.3s;
-  &:hover {
-    opacity: 0.7;
-  }
+  cursor: pointer;
 }
 </style>
