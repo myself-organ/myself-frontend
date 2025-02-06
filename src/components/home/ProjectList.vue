@@ -66,7 +66,7 @@ export default defineComponent({
 
 <style scoped>
 .projects-section {
-  margin: 7rem 0;
+  margin: 3.75rem 0 7rem;
   /* padding: 0 2rem; */
 }
 .projects-section__title {
@@ -84,7 +84,8 @@ export default defineComponent({
   grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
   align-items: center;
   width: 100%;
-  padding: 0 10px;
+  min-height: 30.12rem;
+  /* padding: 0 10px; */
   @media (max-width: 500px) {
     grid-template-columns: 1fr;
   }

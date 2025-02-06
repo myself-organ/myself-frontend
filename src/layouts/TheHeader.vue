@@ -17,7 +17,7 @@
         </li>
         <li class="menu__item">
           <router-link to="/" class="menu__link" style="cursor: no-drop"
-            >Contact</router-link
+            >Contacts</router-link
           >
         </li>
       </ul>
@@ -40,7 +40,7 @@
   padding: 0;
   list-style: none;
   display: flex;
-  gap: 40px;
+  gap: 2rem;
 }
 
 .menu__link {

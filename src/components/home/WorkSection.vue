@@ -6,14 +6,12 @@
         <h3 class="skill-card__title">
           <span class="skill-card__title__ages">{{ work.ages }}</span>
           <span class="skill-card__title__ages">/</span>
-          {{ work.title }}
+          {{ work.jobPosition }}
           <span class="skill-card__title__position">/</span>
-          <span class="skill-card__title__position">{{
-            work.jobPosition
-          }}</span>
+          <span class="skill-card__title__position">{{ work.title }}</span>
           <span class="skill-card__title__country">({{ work.country }})</span>
         </h3>
-        <div class="skill-card__items">
+        <div class="skill-card__items work-experience">
           <p class="skill-card__item" v-for="exp in work.exps" :key="exp">
             {{ exp }}
           </p>
@@ -104,7 +102,7 @@ export default {
                 'PostgreSQL',
                 'GORM',
                 'Redis',
-                'Logrus'
+                'Logrus',
               ],
             },
             {
@@ -166,7 +164,7 @@ export default {
   text-align: start;
   font-weight: 500;
   font-size: 3.75rem;
-  line-height: 110%;
+  line-height: 84%;
   @media (max-width: 768px) {
     align-self: center;
   }
@@ -175,7 +173,7 @@ export default {
 .skills-list {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 1rem;
+  /* gap: 1rem; */
   width: 100%;
 }
 
@@ -217,8 +215,9 @@ export default {
   display: grid;
   grid-template-columns: 1fr 2fr;
   width: 100%;
-  margin: 10rem 0;
+  margin: 10rem 0 3.75rem;
   padding: 0 2rem;
+  gap: 2rem;
   @media (max-width: 768px) {
     margin: 2.5rem 0;
   }
@@ -263,6 +262,9 @@ export default {
   flex-direction: column;
   gap: 0.5rem;
 }
+.work-experience {
+  max-width: 48.5rem;
+}
 .skill-card__item {
   font-weight: 500;
   font-size: 1.19rem;
@@ -277,6 +279,7 @@ export default {
   line-height: 120%;
   color: var(--color-gray);
   width: 100px;
+  margin-right: 0.75rem;
 }
 .skill-wrapper {
   border-radius: 1.88rem;
