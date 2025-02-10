@@ -32,6 +32,11 @@ export default {
   padding: 0 2rem;
   margin-bottom: 10rem;
   margin-top: 12.5rem;
+  @media (max-width: 768px) {
+    margin-top: 5rem;
+    margin-bottom: 7rem;
+    padding: 0 1rem;
+  }
 }
 .about-section__title {
   font-weight: 500;
@@ -52,8 +57,11 @@ export default {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
-  @media(max-width: 768px) {
+  @media (max-width: 768px) {
     font-size: 2.5rem;
+  }
+  @media (max-width: 450px) {
+    font-size: 1.8rem;
   }
 }
 .about-image {

@@ -167,6 +167,7 @@ export default {
   line-height: 84%;
   @media (max-width: 768px) {
     align-self: center;
+    font-size: 2.5rem;
   }
 }
 
@@ -219,7 +220,8 @@ export default {
   padding: 0 2rem;
   gap: 2rem;
   @media (max-width: 768px) {
-    margin: 2.5rem 0;
+    margin: 4rem 0 2.5rem;
+    padding: 0 1rem;
   }
   @media (max-width: 850px) {
     grid-template-columns: 1fr;

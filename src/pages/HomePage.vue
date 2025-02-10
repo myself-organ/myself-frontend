@@ -141,6 +141,9 @@ body {
   margin: 0 auto;
   background: #334155;
   border-radius: 8px;
+  @media(max-width: 768px) {
+    padding: 1rem;
+  }
 }
 
 .form-input {
