@@ -33,7 +33,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 1.75rem 2rem;
-  @media(max-width: 450px) {
+  @media (max-width: 768px) {
     padding-left: 1rem;
     padding-right: 1rem;
   }
@@ -45,8 +45,8 @@
   list-style: none;
   display: flex;
   gap: 2rem;
-  @media(max-width: 450px) {
-    gap: .75rem;
+  @media (max-width: 450px) {
+    gap: 0.75rem;
   }
 }
 

@@ -68,6 +68,9 @@ export default defineComponent({
 .projects-section {
   margin: 3.75rem 0 7rem;
   /* padding: 0 2rem; */
+  @media(max-width: 768px) {
+    margin: 2.5rem 0 4rem;
+  }
 }
 .projects-section__title {
   margin-bottom: 5rem;
@@ -78,6 +81,11 @@ export default defineComponent({
   color: var(--color-white-light);
   text-align: start;
   padding: 0 2rem;
+  @media (max-width: 768px) {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    padding: 0 1rem;
+  }
 }
 .project-list {
   display: grid;
@@ -86,7 +94,6 @@ export default defineComponent({
   width: 100%;
   min-height: 30.12rem;
   row-gap: 2rem;
-  /* padding: 0 10px; */
   @media (max-width: 500px) {
     grid-template-columns: 1fr;
   }
@@ -94,10 +101,6 @@ export default defineComponent({
 .project-card {
   display: flex;
   flex-direction: column;
-  /* gap: 0.75rem; */
-  /* padding: 1.25rem; */
-  /* border-radius: 0.5rem; */
-  /* background-color: var(--color-gray); */
   height: 100%;
   text-align: start;
   color: var(--color-white-light);
@@ -105,6 +108,9 @@ export default defineComponent({
   font-size: 1.19rem;
   line-height: 132%;
   padding: 0 2rem;
+  @media(max-width: 768px) {
+    padding: 0 1rem;
+  }
 }
 .project-card:not(:first-child) {
   border-left: 1px solid var(--color-white-light);
@@ -124,6 +130,9 @@ export default defineComponent({
   font-size: 1.75rem;
   line-height: 110%;
   margin-bottom: 5rem;
+  @media(max-width: 768px) {
+    margin-bottom: 2rem;
+  }
 }
 .project-card__desc {
   font-size: 1rem;

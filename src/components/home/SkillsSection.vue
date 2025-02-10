@@ -85,8 +85,10 @@ export default {
   width: 100%;
   row-gap: 2rem;
   @media (max-width: 768px) {
-    grid-template-columns: 1fr;
+    flex-direction: column;
+    align-items: center;
     max-width: 500px;
+    row-gap: 4rem;
   }
 }
 
@@ -100,6 +102,12 @@ export default {
   gap: 4.5rem;
   max-width: 26rem;
   min-height: 300px;
+  @media (max-width: 768px) {
+    gap: 2rem;
+    min-height: auto;
+    padding: 0 1rem;
+    width: 100%;
+  }
 }
 .skill-card__title {
   font-weight: 500;
@@ -116,7 +124,7 @@ export default {
 .skill-card__item--secondary {
   color: var(--color-gray);
   text-wrap: nowrap;
-  @media(max-width: 425px) {
+  @media (max-width: 425px) {
     text-wrap: wrap;
   }
 }
@@ -125,17 +133,20 @@ export default {
   flex-direction: column;
   gap: 6px;
 }
-.skill-card:nth-child(2),
-.skill-card:nth-child(3) {
-  border-left: 1px solid var(--color-white-light);
-  padding-left: 2rem;
+@media (min-width: 769px) {
+  .skill-card:nth-child(2),
+  .skill-card:nth-child(3) {
+    border-left: 1px solid var(--color-white-light);
+    padding-left: 2rem;
+  }
 }
-@media(max-width: 1000px) {
+
+@media (max-width: 1000px) {
   .skill-card:nth-child(3) {
     border-left: none;
   }
 }
-@media(max-width: 840px) {
+@media (max-width: 840px) {
   .skill-card:nth-child(2) {
     border-left: none;
   }
