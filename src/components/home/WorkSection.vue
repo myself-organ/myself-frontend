@@ -141,7 +141,7 @@ export default {
           country: 'RU',
           jobPosition: 'Frontend developer',
           exps: [
-            'Optimized website performance metrics to "green" status in Core Web Vitals, reducing LCP by 60% (from 4.2s to 1.2s)',
+            'Optimized website performance metrics to "green" status in Core Web Vitals, reducing LCP by 70% (from 4.2s to 1.2s)',
             'Implemented lazy loading and asset optimization strategies for furniture catalog',
             'Developed and maintained responsive UI components using Vue 3 and Vuex',
           ],
