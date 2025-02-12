@@ -153,7 +153,7 @@ export default defineComponent({
   font-weight: 500;
   font-size: 1.19rem;
   line-height: 120%;
-  color: #6fff00;
+  color: var(--color-green);
   display: flex;
   align-items: center;
   gap: 4px;
