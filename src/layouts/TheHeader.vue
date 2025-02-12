@@ -16,7 +16,7 @@
           >
         </li>
         <li class="menu__item">
-          <router-link to="/" class="menu__link" style="cursor: no-drop"
+          <router-link to="/contacts" class="menu__link"
             >Contacts</router-link
           >
         </li>

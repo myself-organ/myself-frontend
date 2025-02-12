@@ -249,13 +249,13 @@ export default {
   }
 }
 .skill-card__title__ages {
-  color: #6fff00;
+  color: var(--color-green);
 }
 .skill-card__title__position {
   color: var(--color-gray);
 }
 .skill-card__title__country {
-  color: #6fff00;
+  color: var(--color-green);
   flex: 1;
   text-align: end;
 }
