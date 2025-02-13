@@ -16,9 +16,7 @@
           >
         </li>
         <li class="menu__item">
-          <router-link to="/contacts" class="menu__link"
-            >Contacts</router-link
-          >
+          <router-link to="/contacts" class="menu__link">Contacts</router-link>
         </li>
       </ul>
     </nav>
@@ -34,8 +32,7 @@
   align-items: center;
   padding: 1.75rem 2rem;
   @media (max-width: 768px) {
-    padding-left: 1rem;
-    padding-right: 1rem;
+    padding: 1rem;
   }
 }
 
@@ -45,8 +42,8 @@
   list-style: none;
   display: flex;
   gap: 2rem;
-  @media (max-width: 450px) {
-    gap: 0.75rem;
+  @media (max-width: 768px) {
+    gap: 1rem;
   }
 }
 
@@ -56,5 +53,8 @@
   line-height: 120%;
   color: var(--color-white-light);
   cursor: pointer;
+  @media (max-width: 700px) {
+    font-size: 1rem;
+  }
 }
 </style>
