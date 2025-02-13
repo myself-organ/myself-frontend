@@ -67,9 +67,8 @@ export default defineComponent({
 <style scoped>
 .projects-section {
   margin: 3.75rem 0 7rem;
-  /* padding: 0 2rem; */
-  @media(max-width: 768px) {
-    margin: 2.5rem 0 4rem;
+  @media (max-width: 768px) {
+    margin: 2.5rem 0 6.75rem;
   }
 }
 .projects-section__title {
@@ -82,9 +81,9 @@ export default defineComponent({
   text-align: start;
   padding: 0 2rem;
   @media (max-width: 768px) {
-    font-size: 2.5rem;
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
     padding: 0 1rem;
+    font-size: 1.94rem;
   }
 }
 .project-list {
@@ -96,6 +95,8 @@ export default defineComponent({
   row-gap: 2rem;
   @media (max-width: 500px) {
     grid-template-columns: 1fr;
+    padding: 0 1rem;
+    row-gap: 3rem;
   }
 }
 .project-card {
@@ -108,19 +109,23 @@ export default defineComponent({
   font-size: 1.19rem;
   line-height: 132%;
   padding: 0 2rem;
-  @media(max-width: 768px) {
-    padding: 0 1rem;
+  @media (max-width: 768px) {
+    gap: 0.75rem;
+    min-height: auto;
+    width: 100%;
+    border-left: 1px solid #e6e6e6;
+    padding: 0rem 0rem 0rem 0.75rem;
   }
 }
 .project-card:not(:first-child) {
   border-left: 1px solid var(--color-white-light);
 }
-@media (max-width: 1200px) {
+@media (min-width: 769px) and (max-width: 1200px) {
   .project-card:nth-child(3) {
     border-left: 0;
   }
 }
-@media (max-width: 800px) {
+@media (min-width: 769px) and (max-width: 800px) {
   .project-card:nth-child(2) {
     border-left: 0;
   }
@@ -130,8 +135,9 @@ export default defineComponent({
   font-size: 1.75rem;
   line-height: 110%;
   margin-bottom: 5rem;
-  @media(max-width: 768px) {
+  @media (max-width: 768px) {
     margin-bottom: 2rem;
+    font-size: 1.31rem;
   }
 }
 .project-card__desc {
@@ -139,14 +145,23 @@ export default defineComponent({
   line-height: 1.5;
   flex: 1;
   margin-bottom: 1.5rem;
+  @media (max-width: 768px) {
+    font-size: 1rem;
+    line-height: 132%;
+    margin-bottom: 0;
+  }
 }
 .project-card__stack {
   margin-bottom: 1.5rem;
-  font-family: var(--font-family);
   font-weight: 500;
   font-size: 1.19rem;
   line-height: 132%;
   color: var(--color-gray);
+  @media (max-width: 768px) {
+    font-size: 1rem;
+    line-height: 132%;
+    margin-bottom: 0;
+  }
 }
 .project-card__link {
   width: fit-content;
@@ -157,5 +172,8 @@ export default defineComponent({
   display: flex;
   align-items: center;
   gap: 4px;
+  @media (max-width: 768px) {
+    font-size: 1rem;
+  }
 }
 </style>

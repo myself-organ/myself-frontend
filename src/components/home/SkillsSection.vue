@@ -88,7 +88,8 @@ export default {
     flex-direction: column;
     align-items: center;
     max-width: 500px;
-    row-gap: 4rem;
+    row-gap: 3rem;
+    padding: 0 1rem;
   }
 }
 
@@ -103,10 +104,11 @@ export default {
   max-width: 26rem;
   min-height: 300px;
   @media (max-width: 768px) {
-    gap: 2rem;
+    gap: 3.75rem;
     min-height: auto;
-    padding: 0 1rem;
     width: 100%;
+    border-left: 1px solid #e6e6e6;
+    padding: 0rem 0rem 0rem 0.75rem;
   }
 }
 .skill-card__title {
@@ -120,6 +122,9 @@ export default {
   font-size: 1.19rem;
   line-height: 120%;
   color: var(--color-white-light);
+  @media (max-width: 768px) {
+    font-size: 1rem;
+  }
 }
 .skill-card__item--secondary {
   color: var(--color-gray);
@@ -141,12 +146,12 @@ export default {
   }
 }
 
-@media (max-width: 1000px) {
+@media (min-width: 769px) and (max-width: 1000px) {
   .skill-card:nth-child(3) {
     border-left: none;
   }
 }
-@media (max-width: 840px) {
+@media (min-width: 769px) and (max-width: 840px) {
   .skill-card:nth-child(2) {
     border-left: none;
   }

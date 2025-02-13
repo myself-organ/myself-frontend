@@ -14,9 +14,7 @@
         >
       </li>
       <li class="menu__item">
-        <router-link to="/contacts" class="menu__link"
-          >Contacts</router-link
-        >
+        <router-link to="/contacts" class="menu__link">Contacts</router-link>
       </li>
     </ul>
   </footer>
@@ -36,12 +34,11 @@ export default defineComponent({
   display: flex;
   align-items: center;
   justify-content: space-between;
-  @media (max-width: 700px) {
+  @media (max-width: 768px) {
+    flex-direction: column-reverse;
+    gap: 1rem;
     padding: 1rem;
-  }
-  @media(max-width: 700px) {
-    flex-direction: column;
-    gap: .75rem;
+    align-items: start;
   }
 }
 .menu-list {
@@ -50,12 +47,20 @@ export default defineComponent({
   list-style: none;
   display: flex;
   gap: 2rem;
+  @media (max-width: 768px) {
+    gap: 1rem;
+  }
 }
 .footer-info {
-font-weight: 500;
-font-size: 1.19rem;
-line-height: 120%;
-color: var(--color-white-light);
+  font-weight: 500;
+  font-size: 1.19rem;
+  line-height: 120%;
+  color: var(--color-white-light);
+  @media (max-width: 768px) {
+    font-size: 0.88rem;
+    line-height: 132%;
+    color: var(--color-gray);
+  }
 }
 .menu__link {
   font-weight: 500;
@@ -63,5 +68,8 @@ color: var(--color-white-light);
   line-height: 120%;
   color: var(--color-white-light);
   cursor: pointer;
+  @media (max-width: 768px) {
+    font-size: 1rem;
+  }
 }
 </style>

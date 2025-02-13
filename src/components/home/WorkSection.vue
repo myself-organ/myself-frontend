@@ -5,9 +5,9 @@
       <li v-for="work in works" :key="work.title" class="skill-card">
         <h3 class="skill-card__title">
           <span class="skill-card__title__ages">{{ work.ages }}</span>
-          <span class="skill-card__title__ages">/</span>
+          <span class="skill-card__title__ages work-slash">/</span>
           {{ work.jobPosition }}
-          <span class="skill-card__title__position">/</span>
+          <span class="skill-card__title__position work-slash">/</span>
           <span class="skill-card__title__position">{{ work.title }}</span>
           <span class="skill-card__title__country">({{ work.country }})</span>
         </h3>
@@ -167,7 +167,8 @@ export default {
   line-height: 84%;
   @media (max-width: 768px) {
     align-self: center;
-    font-size: 2.5rem;
+    font-size: 1.94rem;
+    line-height: 110%;
   }
 }
 
@@ -227,6 +228,9 @@ export default {
     grid-template-columns: 1fr;
     gap: 2rem;
   }
+  @media (max-width: 768px) {
+    margin-top: 6.25rem;
+  }
 }
 .skill-card {
   display: flex;
@@ -246,10 +250,16 @@ export default {
   @media (max-width: 768px) {
     gap: 0.5rem;
     flex-wrap: wrap;
+    font-size: 1.31rem;
   }
 }
 .skill-card__title__ages {
   color: var(--color-green);
+}
+.work-slash {
+  @media (max-width: 768px) {
+    display: none;
+  }
 }
 .skill-card__title__position {
   color: var(--color-gray);
@@ -263,6 +273,9 @@ export default {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+  @media(max-width: 768px) {
+    gap: 0.75rem;
+  }
 }
 .work-experience {
   max-width: 48.5rem;
@@ -274,6 +287,10 @@ export default {
   display: flex;
   gap: 4px;
   flex-wrap: wrap;
+  color: var(--color-gray);
+  @media (max-width: 768px) {
+    font-size: 1rem;
+  }
 }
 .tech-title {
   font-weight: 500;
@@ -282,6 +299,10 @@ export default {
   color: var(--color-gray);
   width: 100px;
   margin-right: 0.75rem;
+  @media(max-width: 768px) {
+    width: 100%;
+    margin-bottom: 4px;
+  }
 }
 .skill-wrapper {
   border-radius: 1.88rem;
@@ -293,5 +314,9 @@ export default {
   font-size: 1.19rem;
   line-height: 120%;
   color: var(--color-white-light);
+  @media(max-width: 768px) {
+    font-size: 1rem;
+    padding: 0.12rem 0.75rem 0.19rem 0.75rem;
+  }
 }
 </style>

@@ -33,8 +33,8 @@ export default {
   margin-bottom: 10rem;
   margin-top: 12.5rem;
   @media (max-width: 768px) {
-    margin-top: 5rem;
-    margin-bottom: 7rem;
+    margin-top: 9rem;
+    margin-bottom: 6.25rem;
     padding: 0 1rem;
   }
 }
@@ -58,10 +58,7 @@ export default {
     -webkit-text-fill-color: transparent;
   }
   @media (max-width: 768px) {
-    font-size: 2.5rem;
-  }
-  @media (max-width: 450px) {
-    font-size: 1.8rem;
+    font-size: 1.94rem;
   }
 }
 .about-image {
