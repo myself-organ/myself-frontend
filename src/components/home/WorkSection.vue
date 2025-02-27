@@ -82,10 +82,10 @@ export default {
           jobPosition: 'FullStack developer',
           exps: [
             'Optimized microservice architecture resulting in 10% reduction in video generation time and improved system scalability',
-            'Increased system throughput from 1,000 to 2,000 concurrent requests per minute through efficient service communication using gRPC',
-            'Reduced API response time by 65% (from 800ms to 280ms) by implementing Redis caching strategy',
+            'Increased system throughput from 1,000 to 2,000 concurrent requests per second through efficient service communication using gRPC',
+            'Reduced API response time to 150ms by implementing Redis caching strategy',
             'Designed and developed intuitive AI prompt management interface using Vue 3 and Nuxt 3',
-            'Improved system reliability by implementing comprehensive logging with Logrus and API documentation with Swagger',
+            'Enhanced system observability through Logrus logging and improved developer experience with Swagger API documentation.',
           ],
           techs: [
             {
