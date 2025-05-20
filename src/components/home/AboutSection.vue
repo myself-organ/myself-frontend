@@ -8,8 +8,9 @@
       alt="Afanasev Aleksandr photo."
     />
     <h1 class="about-section__title">
-      I’m a full-stack developer experienced in building scalable web
-      applications with <span class="title-vue">Vue.js</span> and
+      I’m a <span class="title-vue">full-stack developer</span> experienced
+      in building scalable web applications with
+      <span class="title-vue">Vue.js</span> and
       <span class="title-go">Go</span>. I also have a passion for music, books,
       and data.
     </h1>
