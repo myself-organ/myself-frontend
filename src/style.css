@@ -7,7 +7,7 @@
   --color-gray: #858585;
   --color-text: #0d0d0d;
   --color-green: #6fff00;
-  font-family: "Archivo", serif;
+  font-family: 'Archivo', serif;
   line-height: 1.5;
   font-weight: 400;
 
@@ -76,6 +76,18 @@ button:focus-visible {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+}
+
+::selection {
+  background-color: #41b883;
+  color: #1e1e1e;
+  text-shadow: none;
+}
+
+::-moz-selection {
+  background-color: #41b883;
+  color: #1e1e1e;
+  text-shadow: none;
 }
 
 @media (prefers-color-scheme: light) {
