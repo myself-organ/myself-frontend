@@ -80,15 +80,16 @@ button:focus-visible {
 
 ::selection {
   background-color: #41b883;
-  color: #1e1e1e;
+  color: #030303;
   text-shadow: none;
 }
 
 ::-moz-selection {
   background-color: #41b883;
-  color: #1e1e1e;
+  color: #030303;
   text-shadow: none;
 }
+
 
 @media (prefers-color-scheme: light) {
   :root {
