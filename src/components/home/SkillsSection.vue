@@ -2,7 +2,7 @@
   <section class="skills-section">
     <ul class="skills-list">
       <li v-for="skill in skills" :key="skill.title" class="skill-card">
-        <h2 class="skill-card__title">{{ skill.title }}</h2>
+        <p class="skill-card__title">{{ skill.title }}</p>
         <div class="skill-card__items">
           <template v-for="tech in skill.techs" :key="tech">
             <template v-if="Array.isArray(tech)">
