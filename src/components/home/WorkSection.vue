@@ -6,9 +6,14 @@
         <h3 class="skill-card__title">
           <span class="skill-card__title__ages">{{ work.ages }}</span>
           <span class="skill-card__title__ages work-slash">/</span>
-          {{ work.jobPosition }}
+          <span class="skill-card__title__job">{{ work.jobPosition }}</span>
           <span class="skill-card__title__position work-slash">/</span>
-          <span class="skill-card__title__position">{{ work.title }}</span>
+          <span class="skill-card__title__position only-mobile"
+            >in {{ work.title }}</span
+          >
+          <span class="skill-card__title__position only-desk">{{
+            work.title
+          }}</span>
           <span class="skill-card__title__country">({{ work.country }})</span>
         </h3>
         <div class="skill-card__items work-experience">
@@ -263,17 +268,28 @@ export default {
 }
 .skill-card__title__position {
   color: var(--color-gray);
+  @media (max-width: 768px) {
+    order: 4;
+  }
 }
 .skill-card__title__country {
   color: var(--color-green);
   flex: 1;
   text-align: end;
+  @media (max-width: 768px) {
+    order: 2;
+  }
+}
+.skill-card__title__job {
+  @media (max-width: 768px) {
+    order: 3;
+  }
 }
 .skill-card__items {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
-  @media(max-width: 768px) {
+  @media (max-width: 768px) {
     gap: 0.75rem;
   }
 }
@@ -299,7 +315,7 @@ export default {
   color: var(--color-gray);
   width: 100px;
   margin-right: 0.75rem;
-  @media(max-width: 768px) {
+  @media (max-width: 768px) {
     width: 100%;
     margin-bottom: 4px;
   }
@@ -314,9 +330,19 @@ export default {
   font-size: 1.19rem;
   line-height: 120%;
   color: var(--color-white-light);
-  @media(max-width: 768px) {
+  @media (max-width: 768px) {
     font-size: 1rem;
     padding: 0.12rem 0.75rem 0.19rem 0.75rem;
+  }
+}
+.only-desk {
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
+}
+.only-mobile {
+  @media (min-width: 768px) {
+    display: none;
   }
 }
 </style>
