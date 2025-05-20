@@ -34,11 +34,13 @@ export default defineComponent({
   display: flex;
   align-items: center;
   justify-content: space-between;
+  height: 103px;
   @media (max-width: 768px) {
     flex-direction: column-reverse;
     gap: 1rem;
     padding: 1rem;
     align-items: start;
+    height: 85px;
   }
 }
 .menu-list {
