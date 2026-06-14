@@ -27,40 +27,40 @@ export default {
   name: 'SkillsSection',
   data() {
     return {
-      skills: [
-        {
-          title: 'Frontend',
-          techs: [
-            ['Vue 2 / 3', '(Vuex, Vue Router, Composition API, Pinia)'],
-            'Nuxt 3, Vite',
-            'TypeScript',
-            'JavaScript',
-            'Tailwind, SCSS',
-            'BEM, SOLID, OOP',
-          ],
-        },
-        {
-          title: 'Backend',
-          techs: [
-            ['Go', '(Gin, gRPC, Protocol Buffers)'],
-            'GORM',
-            'PostgreSQL, MySQL',
-            'MongoDB',
-            'Redis',
-            'REST API',
-            'Swagger/OpenAPI',
-          ],
-        },
-        {
-          title: 'Additional Skills',
-          techs: [
-            'Internationalization (i18n)',
-            'Performance optimization',
-            'API integration expertise',
-            'English (B2 level)',
-          ],
-        },
-      ],
+  skills: [
+  {
+    title: 'CRO / Testing',
+    techs: [
+      ['Monetate', '(A/B, MVT, personalisation)'],
+      'Convert.com',
+      'Hypothesis formation',
+      'Test prioritisation',
+      'Statistical analysis',
+      'UX/UI audits',
+    ],
+  },
+  {
+    title: 'Analytics',
+    techs: [
+      ['Contentsquare', '(funnels, session replays)'],
+      ['GA4', '(events, segments, BigQuery)'],
+      'Google Tag Manager',
+      'Microsoft Clarity',
+      'Hotjar',
+      'Apache Superset',
+    ],
+  },
+  {
+    title: 'Technical',
+    techs: [
+      ['JavaScript', '(self-implementation of tests)'],
+      'Vue 3, TypeScript',
+      'HTML, CSS',
+      'Figma',
+      'English (B2)',
+    ],
+  },
+        ],
     };
   },
 };

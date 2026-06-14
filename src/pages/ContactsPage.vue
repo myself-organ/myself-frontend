@@ -1,7 +1,7 @@
 <template>
   <div class="contact-page">
     <div class="contact-block">
-      <p class="contact-subtitle">mail</p>
+      <p class="contact-subtitle">email</p>
       <a
         class="contact-title"
         href="mailto:sasha.af.one@gmail.com"
@@ -9,12 +9,12 @@
         >sasha.af.one@gmail.com</a
       >
     </div>
-    <div class="contact-block">
+    <!-- <div class="contact-block">
       <p class="contact-subtitle">telegram</p>
-      <a class="contact-title" href="https://t.me/blade_runner_49" target="_blank" rel="noopener noreferrer"
-        >@blade_runner_49</a
+      <a class="contact-title" href="" target="_blank" rel="noopener noreferrer"
+        ></a
       >
-    </div>
+    </div> -->
   </div>
 </template>
 

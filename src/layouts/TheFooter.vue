@@ -1,6 +1,6 @@
 <template>
   <footer class="footer">
-    <p class="footer-info">© 2025 Alexander Afanasjev, All Rights Reserved.</p>
+    <p class="footer-info">© 2026 Alexander Afanasjev, All Rights Reserved.</p>
 
     <ul class="menu-list">
       <li class="menu__item">
