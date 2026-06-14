@@ -9,7 +9,7 @@
           <span class="skill-card__title__job">{{ work.jobPosition }}</span>
           <span class="skill-card__title__position work-slash">/</span>
           <span class="skill-card__title__position only-mobile"
-            >in {{ work.title }}</span
+            >{{ work.title }}</span
           >
           <span class="skill-card__title__position only-desk">{{
             work.title
@@ -80,84 +80,71 @@ export default {
   name: 'WorksSection',
   data() {
     return {
-      works: [
-        {
-          title: 'Launchist',
-          country: 'US',
-          jobPosition: 'FullStack developer',
-          exps: [
-            'Optimized microservice architecture resulting in 10% reduction in video generation time and improved system scalability',
-            'Increased system throughput from 1,000 to 2,000 concurrent requests per second through efficient service communication using gRPC',
-            'Reduced API response time to 150ms by implementing Redis caching strategy',
-            'Designed and developed intuitive AI prompt management interface using Vue 3 and Nuxt 3',
-            'Enhanced system observability through Logrus logging and improved developer experience with Swagger API documentation.',
-          ],
-          techs: [
-            {
-              title: 'Frontend: ',
-              stack: ['Vue 3', 'Nuxt 3', 'Vuex', 'TypeScript', 'Tailwind CSS'],
-            },
-            {
-              title: 'Backend: ',
-              stack: [
-                'Go',
-                'Gin',
-                'gRPC',
-                'Protocol Buffers',
-                'PostgreSQL',
-                'GORM',
-                'Redis',
-                'Logrus',
-              ],
-            },
-            {
-              title: 'DevOps: ',
-              stack: ['Docker', 'CI/CD'],
-            },
-          ],
-          ages: '2024 - 2025',
-        },
-        {
-          title: 'Puzzle',
-          country: 'KZ',
-          jobPosition: 'Frontend developer',
-          exps: [
-            'Improved application performance by 30% through code optimization and lazy loading implementation',
-            'Developed and launched multilingual support for 3 languages (Kazakh, Russian, English), increasing market reach by 40%',
-            'Rebuilt insurance policy calculator leading to 5% conversion rate increase',
-          ],
-          techs: [
-            {
-              stack: [
-                'Vue 3',
-                'Nuxt 3',
-                'TypeScript',
-                'SCSS',
-                'Tailwind CSS',
-                'i18n',
-                'Axios',
-              ],
-            },
-          ],
-          ages: '2023 - 2024',
-        },
-        {
-          title: 'Exmail',
-          country: 'RU',
-          jobPosition: 'Frontend developer',
-          exps: [
-            'Optimized website performance metrics to "green" status in Core Web Vitals, reducing LCP by 70% (from 4.2s to 1.2s)',
-            'Implemented lazy loading and asset optimization strategies for furniture catalog',
-            'Developed and maintained responsive UI components using Vue 3 and Vuex',
-          ],
-          techs: [
-            {
-              stack: ['Vue 2/3', 'Vuex', 'Vite', 'CSS'],
-            },
-          ],
-          ages: '2022 - 2023',
-        },
-      ],
+    works: [
+  {
+    title: 'Freelance',
+    country: 'Remote',
+    jobPosition: 'CRO Specialist',
+    exps: [
+      'Working with e-commerce brands across Europe and North America on conversion rate optimisation, A/B testing, and digital experience analytics.',
+    ],
+    techs: [
+      {
+        stack: ['Monetate', 'Contentsquare', 'GA4', 'GTM', 'JavaScript'],
+      },
+    ],
+    ages: '2025 - Present',
+  },
+  {
+    title: 'Launchist',
+    country: 'US',
+    jobPosition: 'CRO Specialist',
+    exps: [
+      'Delivered 35+ A/B tests across 4 e-commerce brands using Monetate and Convert, expanding the testing programme from 2 to 4 sites.',
+      'Led end-to-end experiment execution — from hypothesis development and design collaboration to self-written JavaScript implementation, without relying on a separate dev resource.',
+      'Redesigned PLP card structure based on UX analysis; implemented test independently in JS — resulted in +3.6% Revenue per Session.',
+      'Analysed funnel performance using GA4, Contentsquare, and behavioural analytics to identify and prioritise optimisation opportunities across homepage, PDP, cart, and checkout flows.',
+    ],
+    techs: [
+      {
+        stack: ['Monetate', 'Convert.com', 'Contentsquare', 'GA4', 'BigQuery', 'GTM', 'JavaScript', 'Figma'],
+      },
+    ],
+    ages: '2024 - 2025',
+  },
+  {
+    title: 'Puzzle',
+    country: 'KZ',
+    jobPosition: 'Frontend Developer',
+    exps: [
+      'Improved application performance by 30% through code optimization and lazy loading implementation',
+      'Developed and launched multilingual support for 3 languages (Kazakh, Russian, English), increasing market reach by 40%',
+      'Rebuilt insurance policy calculator leading to 5% conversion rate increase',
+    ],
+    techs: [
+      {
+        stack: ['Vue 3', 'Nuxt 3', 'TypeScript', 'SCSS', 'Tailwind CSS', 'i18n', 'Axios'],
+      },
+    ],
+    ages: '2023 - 2024',
+  },
+  {
+    title: 'Exmail',
+    country: 'RU',
+    jobPosition: 'Frontend Developer',
+    exps: [
+      'Optimized website performance metrics to "green" status in Core Web Vitals, reducing LCP by 70% (from 4.2s to 1.2s)',
+      'Implemented lazy loading and asset optimization strategies for furniture catalog',
+      'Developed and maintained responsive UI components using Vue 3 and Vuex',
+    ],
+    techs: [
+      {
+        stack: ['Vue 2/3', 'Vuex', 'Vite', 'CSS'],
+      },
+    ],
+    ages: '2022 - 2023',
+  },
+],
     };
   },
 };
